@@ -83,7 +83,7 @@ class Capital extends Component {
 
                                                           {values.map(value => (
 
-                                                                      <p>{value.quantity4}</p>
+                                                                      <p>{value.quantity5}</p>
 
                                                                                 ))}
 
@@ -93,7 +93,7 @@ class Capital extends Component {
 
                                                           {values.map(value => (
 
-                                                                        <p>{value.quantity5}</p>
+                                                                        <p>{value.quantity4}</p>
                                                                                  ))}
 
                                                           </p>

@@ -3,45 +3,11 @@ const Schema = mongoose.Schema;
 
 const ItemSchema = new Schema({
 
-   total: {
 
-      type: String,
-      //required : true
-   },
+    quantity1: {
 
-    cpviz: {
-
-        type: String,
-        //required : true
+        type: Number
     },
-
-    completed: {
-
-        type: String,
-        //required : true
-    },
-
-    active: {
-
-        type: String,
-        //required : true
-    },
-
-    inprogress: {
-
-        type: String,
-        //required : true
-    },
-    draft: {
-
-        type: String,
-        //required : true
-    },
-
-   quantity1: {
-
-       type: Number
-   },
 
     quantity2: {
 

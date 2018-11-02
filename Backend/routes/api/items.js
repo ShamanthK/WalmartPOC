@@ -14,12 +14,7 @@ router.get('/', (req, res) => {
 router.post('/', (req, res) => {
 
     const newItem = new Item({
-        total: req.body.total,
-        cpviz: req.body.cpviz,
-        completed: req.body.completed,
-        active: req.body.active,
-        inprogress: req.body.inprogress,
-        draft: req.body.draft,
+
         quantity1: req.body.quantity1,
         quantity2: req.body.quantity2,
         quantity3: req.body.quantity3,
