@@ -39,7 +39,7 @@ class ProjectSchedule extends Component{
                         <p className="size"><b>
                             {values.map(value => (
 
-                                <p>{value.quantity11}</p>
+                                <p>{value.quantity11+"%"}</p>
 
                             ))}
                         </b></p></div>
@@ -48,7 +48,7 @@ class ProjectSchedule extends Component{
 
                             {values.map(value => (
 
-                                <p>{value.quantity12}</p>
+                                <p>{value.quantity12+"%"}</p>
 
                             ))}
                         </b></p>

@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import Logoimg from "./superscript.JPG";
-import Chart from './chart'
-import Table from './table'
+import Chart from './Chart'
+import Table from './Table'
+
 
 class Capital extends Component {
 
@@ -39,10 +40,7 @@ class Capital extends Component {
         this.getChartData();
     }
 
-    onSubmit() {
 
-        alert('Superscript Clicked!');
-    }
 
     onClicked(e) {
 
@@ -59,7 +57,7 @@ class Capital extends Component {
     }
 
     getChartData() {
-        // Ajax calls here
+
         this.setState({
             chartData: {
                 labels: ['Inbox', 'Exp', 'Relo', 'SP'],
@@ -96,15 +94,13 @@ class Capital extends Component {
 
             <div className="aligndiv">
 
-
-
                 <div class="card" onClick={this.onClicked.bind(this)}>
                     <h2>Capital Project <sup onClick={this.onSubmit}><img src={Logoimg}></img></sup></h2>
                     <div className="left"><p className="title">Total</p>
                         <p className="size"><b>
                             {values.map(value => (
 
-                                <p>{value.quantity1}</p>
+                                <p>{value.quantity1+"%"}</p>
 
                             ))}
                         </b></p></div>

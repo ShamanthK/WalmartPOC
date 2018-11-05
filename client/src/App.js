@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Capital from './components/capital'
+import Capital from './components/Capital'
 import Logoimg from "./walmart.JPG";
-import Chart from './components/chart';
-import SideBar from './components/sidebar';
+
+import Sidebar from './components/Sidebar';
 import Select from 'react-select';
 import ScheduleTaskRisk from './components/ScheduleTaskRisk'
 
@@ -46,15 +46,12 @@ class App extends Component {
 
                 </header>
                 <div>
-                <SideBar />
+                <Sidebar />
 
                 <Capital/>
                 <ProjectSchedule/>
                 <ScheduleTaskRisk/>
 
-
-
-                <FinancialPerformance/>
                 </div>
 
             </div>

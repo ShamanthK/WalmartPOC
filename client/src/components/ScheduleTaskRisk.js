@@ -44,7 +44,7 @@ class ScheduleTaskRisk extends Component {
                         <p className="size"><b>
                             {values.map(value => (
 
-                                <p>{value.quantity7}</p>
+                                <p>{value.quantity7+"%"}</p>
 
                             ))}
                         </b></p></div>

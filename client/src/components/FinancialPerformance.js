@@ -51,7 +51,7 @@ class FinancialPerformance extends Component {
                         <p className="size"><b>
                             {values.map(value => (
 
-                                <p>{value.quantity16}</p>
+                                <p>{value.quantity16+"%"}</p>
 
                             ))}
                         </b></p></div>
@@ -60,7 +60,7 @@ class FinancialPerformance extends Component {
 
                             {values.map(value => (
 
-                                <p>{value.quantity17}</p>
+                                <p>{"$"+value.quantity17+"M"}</p>
 
                             ))}
                         </b></p>
@@ -73,7 +73,7 @@ class FinancialPerformance extends Component {
 
                             {values.map(value => (
 
-                                <p>{value.quantity18}</p>
+                                <p>{"$"+value.quantity18+"M"}</p>
 
                             ))}
 
@@ -83,7 +83,7 @@ class FinancialPerformance extends Component {
 
                             {values.map(value => (
 
-                                <p>{value.quantity19}</p>
+                                <p>{"$"+value.quantity19+"M"}</p>
 
                             ))}
 

@@ -94,6 +94,7 @@
 .aligndiv {
 
     float: left;
+    padding: 30px;
 }
 
 
@@ -101,7 +102,9 @@
 .aligndiv1 {
 
     float: left;
-    padding: 80px;
+    padding-top: 20px;
+    padding-left: 30px;
+
 }
 
 .aligndiv3 {
@@ -209,7 +212,7 @@ body {
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
-    width: 100%;
+    width: 100px;
 }
 
 td, th {

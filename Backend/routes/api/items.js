@@ -15,6 +15,7 @@ router.post('/', (req, res) => {
 
     const newItem = new Item({
 
+
         quantity1: req.body.quantity1,
         quantity2: req.body.quantity2,
         quantity3: req.body.quantity3,
@@ -23,7 +24,7 @@ router.post('/', (req, res) => {
         quantity6: req.body.quantity6,
         quantity7: req.body.quantity7,
         quantity8: req.body.quantity8,
-        quantity7: req.body.quantity9,
+        quantity9: req.body.quantity9,
         quantity10: req.body.quantity10,
         quantity11: req.body.quantity11,
         quantity12: req.body.quantity12,
@@ -40,12 +41,7 @@ router.post('/', (req, res) => {
     newItem.save().then(item => res.json(item));
 });
 
-router.delete('/:id', (req, res) => {
 
-    Item.findById(req.params.id)
-        .then(item => item.remove().then(() => res.json({success: true})))
-        .catch(err => res.status(404).json({success: false}));
-})
 
 
 module.exports = router;

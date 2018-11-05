@@ -10,7 +10,7 @@ import Select from 'react-select';
     class Sidebar extends Component {
 
         constructor() {
-            super()
+            super();
             this.state = {
                 location: [
                     {
