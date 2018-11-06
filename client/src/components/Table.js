@@ -23,7 +23,7 @@ class Table extends Component {
             })
             .then(res => {
                 this.setState({values: res});
-                console.log("state", this.state.values)
+                console.log("state", this.state.values[0].type)
 
             })
             .catch(error => console.log(error))
@@ -33,6 +33,8 @@ class Table extends Component {
     render() {
 
         const {values} = this.state;
+
+
 
         return (
 
@@ -50,12 +52,24 @@ class Table extends Component {
 
                 <tr>
                     <td>
+
+
+
+
+
+
                         {values.map(value => (
 
                             <p>{value.type}</p>
 
                         ))}
+
+
+
+
+
                     </td>
+
                     <td>
                         {values.map(value => (
 

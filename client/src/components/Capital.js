@@ -73,9 +73,9 @@ class Capital extends Component {
                         ],
                         backgroundColor: [
                             'rgba(54, 162, 235, 0.6)',
-                            'rgba(54, 162, 235, 0.6)',
-                            'rgba(54, 162, 235, 0.6)',
-                            'rgba(54, 162, 235, 0.6)',
+                            'rgb(0,255,127)',
+                            'rgb(255, 0, 0)',
+                            'rgb(255, 255, 0)',
 
 
                         ]
@@ -167,7 +167,7 @@ class Capital extends Component {
 
                 <div  onClick={this.onClickTable.bind(this)}>
                 {this.state.showReply &&
-                <Chart chartData={this.state.chartData} location="Massachusetts" legendPosition="bottom"/>}
+                <Chart chartData={this.state.chartData}  location="Capital Project By Type" legendPosition="bottom"/>}
                 </div>
                 {this.state.showTable &&
                 <Table/>}

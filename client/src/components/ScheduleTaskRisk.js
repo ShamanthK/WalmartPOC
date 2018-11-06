@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import Chart from './Chart'
+import Table from './Table'
 
 class ScheduleTaskRisk extends Component {
 
@@ -9,6 +11,9 @@ class ScheduleTaskRisk extends Component {
         this.state = {
 
             values: [],
+            showCharts: false,
+            showTable: false,
+            chartData: {}
 
         }
     }
@@ -29,6 +34,55 @@ class ScheduleTaskRisk extends Component {
 
     }
 
+    componentWillMount() {
+        this.getChartData();
+    }
+
+
+
+    onClicked(e) {
+
+        e.preventDefault();
+        this.setState({showReply: !this.state.showReply})
+
+    }
+
+    onClickTable(e) {
+
+        e.preventDefault();
+        this.setState({showTable: !this.state.showTable})
+
+    }
+
+    getChartData() {
+
+        this.setState({
+            chartData: {
+                labels: ['Inbox', 'Exp', 'Relo', 'SP'],
+                datasets: [
+                    {
+                        label: 'Projects By Type',
+                        data: [
+                            16,
+                            17,
+                            18,
+                            19,
+
+                        ],
+                        backgroundColor: [
+                            'rgba(54, 162, 235, 0.6)',
+                            'rgb(0,255,127)',
+                            'rgb(255, 0, 0)',
+                            'rgb(255, 255, 0)',
+
+
+                        ]
+                    }
+                ]
+            }
+        });
+    }
+
     render() {
 
         const {values} = this.state;
@@ -37,7 +91,7 @@ class ScheduleTaskRisk extends Component {
 
             <div className="aligndiv">
 
-                <div class="card1">
+                <div class="card1" onClick={this.onClicked.bind(this)}>
                     <br></br>
                     <h2>Schedule Task Risk</h2>
                     <div className="left"><p className="title">Total</p>
@@ -84,6 +138,13 @@ class ScheduleTaskRisk extends Component {
 
 
                 </div>
+
+                <div  onClick={this.onClickTable.bind(this)}>
+                    {this.state.showReply &&
+                    <Chart chartData={this.state.chartData} location="Schedule Task Risk" legendPosition="bottom"/>}
+                </div>
+                {this.state.showTable &&
+                <Table/>}
 
             </div>
         )

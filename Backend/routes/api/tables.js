@@ -31,7 +31,11 @@ router.post('/', (req, res) => {
     newTable.save().then(table => res.json(table));
 });
 
-
+router.delete('/:id', (req, res) => {
+    TableData.findById(req.params.id)
+        .then(table => table.remove().then(() => res.json({success: true})))
+        .catch(err => res.status(404).json({success: false}));
+})
 
 
 module.exports = router;
